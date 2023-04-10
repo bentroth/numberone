@@ -1,0 +1,45 @@
+# Define an array of dictionaries that contains information about the top 5 pizza places in Pittsburgh
+pizza_places = [
+    {
+        "name": "Slice on Broadway",
+        "address": "2128 Broadway Ave, Pittsburgh, PA 15216",
+        "phone": "(412) 531-1068",
+        "rating": 4.5
+    },
+    {
+        "name": "Fiori's Pizzaria",
+        "address": "103 Capital Ave, Pittsburgh, PA 15226",
+        "phone": "(412) 343-7788",
+        "rating": 4.4
+    },
+    {
+        "name": "Mineo's Pizza House",
+        "address": "2128 Murray Ave, Pittsburgh, PA 15217",
+        "phone": "(412) 521-2053",
+        "rating": 4.3
+    },
+    {
+        "name": "Aiello's Pizza",
+        "address": "2112 Murray Ave, Pittsburgh, PA 15217",
+        "phone": "(412) 521-9973",
+        "rating": 4.2
+    },
+    {
+        "name": "Beto's Pizza",
+        "address": "1473 Banksville Rd, Pittsburgh, PA 15216",
+        "phone": "(412) 561-0121",
+        "rating": 4.1
+    }
+]
+
+# Sort the pizza_places list in descending order based on the rating
+pizza_places = sorted(pizza_places, key=lambda x: x['rating'], reverse=True)
+
+# Loop through the first 5 dictionaries in the pizza_places list and display the ranking and details on the screen
+for i in range(5):
+    print(f"Ranking: {i + 1}")
+    print(f"Name: {pizza_places[i]['name']}")
+    print(f"Address: {pizza_places[i]['address']}")
+    print(f"Phone: {pizza_places[i]['phone']}")
+    print(f"Rating: {pizza_places[i]['rating']}")
+    print("--------------------------------")
